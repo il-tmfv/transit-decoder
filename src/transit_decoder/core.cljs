@@ -1,5 +1,6 @@
 (ns transit-decoder.core
     (:require [reagent.core :as r]
+              [clojure.pprint :refer [pprint]]
               [cognitect.transit :as transit]))
 
 (enable-console-print!)
@@ -18,7 +19,7 @@
 
 (defn convert []
   (let [converted-data (transit/read (transit/reader :json) @transit-str*)
-        pretty-converted-data (with-out-str (cljs.pprint/pprint converted-data))]
+        pretty-converted-data (with-out-str (pprint converted-data))]
     (reset! clojure-str* (str pretty-converted-data))))
   
 (defn app []
