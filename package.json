@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "prebuild": "lein clean",
+    "predeploy": "yarn build",
+    "build": "lein cljsbuild once min",
+    "deploy": "gh-pages -d resources/public"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
