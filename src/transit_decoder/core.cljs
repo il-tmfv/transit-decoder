@@ -1,5 +1,7 @@
 (ns transit-decoder.core
   (:require [reagent.core :as r]
+            ["prismjs/components/prism-core" :refer [highlight languages]]
+            ["prismjs/components/prism-clojure"]
             [clojure.pprint :refer [pprint]]
             [cognitect.transit :as transit]))
 
@@ -19,8 +21,9 @@
 
 (defn convert []
   (let [converted-data (transit/read (transit/reader :json) @transit-str*)
-        pretty-converted-data (with-out-str (pprint converted-data))]
-    (reset! clojure-str* (str pretty-converted-data))))
+        pretty-converted-data (with-out-str (pprint converted-data))
+        clojure-lang (.-clojure languages)]
+    (reset! clojure-str* (highlight (str pretty-converted-data) clojure-lang))))
 
 (defn app []
   [:div
@@ -28,8 +31,7 @@
    [:textarea {:value @transit-str*
                :on-change #(reset! transit-str* (.. % -target -value))}]
    [:h3 "Clojure"]
-   [:textarea {:value @clojure-str*
-               :on-click #(.preventDeafult %)}]
+   [:pre>code {:dangerouslySetInnerHTML {:__html @clojure-str*}}]
    [:button {:on-click convert} "Convert Transit -> Clojure"]])
 
 (r/render [app] (.getElementById js/document "app"))

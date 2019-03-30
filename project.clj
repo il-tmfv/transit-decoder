@@ -36,6 +36,7 @@
                            :output-to "resources/public/js/compiled/transit_decoder.js"
                            :output-dir "resources/public/js/compiled/out"
                            :source-map-timestamp true
+                           :npm-deps {:prismjs "1.16.0"}
                            ;; To console.log CLJS data-structures make sure you enable devtools in Chrome
                            ;; https://github.com/binaryage/cljs-devtools
                            :preloads [devtools.preload]}}
@@ -47,6 +48,7 @@
                 :compiler {:output-to "resources/public/js/compiled/transit_decoder.js"
                            :main transit-decoder.core
                            :optimizations :advanced
+                           :npm-deps {:prismjs "1.16.0"}
                            :pretty-print false}}]}
 
   :figwheel {;; :http-server-root "public" ;; default and assumes "resources"
