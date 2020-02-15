@@ -18,7 +18,7 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-        node-version: '12.16.0'
+          node-version: '12.16.0'
 
       - name: install leiningen
         uses: DeLaGuardo/setup-clojure@master
