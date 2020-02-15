@@ -37,7 +37,6 @@
                            :output-dir "resources/public/js/compiled/out"
                            :source-map-timestamp true
                            :infer-externs true
-                           ;:externs ["resources/public/js/prism-extern.js"]
                            :npm-deps {:prismjs "1.16.0"}
                            ;; To console.log CLJS data-structures make sure you enable devtools in Chrome
                            ;; https://github.com/binaryage/cljs-devtools
@@ -50,7 +49,8 @@
                 :compiler {:output-to "resources/public/js/compiled/transit_decoder.js"
                            :main transit-decoder.core
                            :optimizations :advanced
-                           :externs ["resources/public/js/prism-extern.js"]
+                           ; :externs ["resources/public/js/prism-extern.js"]
+                           :infer-externs true
                            :npm-deps {:prismjs "1.16.0"}
                            :install-deps true
                            :pretty-print false}}]}
