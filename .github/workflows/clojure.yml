@@ -17,8 +17,8 @@ jobs:
       - name: build
         run: lein cljsbuild once min
 
-      - name: Deploy
+      - name: deploy to gh pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GH_PAGES_SECRET }}
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: ./resources/public
