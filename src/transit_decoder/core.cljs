@@ -7,8 +7,6 @@
 
 (enable-console-print!)
 
-; (set! *warn-on-infer* true)
-
 (defonce app-state (r/atom {:transit ""
                             :clojure ""}))
 
