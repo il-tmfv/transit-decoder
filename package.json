@@ -1,13 +1,4 @@
 {
-  "scripts": {
-    "prebuild": "lein clean",
-    "predeploy": "yarn build",
-    "build": "lein cljsbuild once min",
-    "deploy": "gh-pages -d resources/public"
-  },
-  "devDependencies": {
-    "gh-pages": "^2.0.1"
-  },
   "dependencies": {
     "@cljs-oss/module-deps": "^1.1.1",
     "prismjs": "^1.16.0"
