@@ -10,9 +10,12 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
- 
+
       - name: install deps
-        run: lein deps 
+        run: lein deps
+
+      - name: clean
+        run: lein clean
 
       - name: build
         run: lein cljsbuild once min
