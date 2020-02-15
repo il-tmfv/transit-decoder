@@ -1,0 +1,24 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+ 
+      - name: install deps
+        run: lein deps 
+
+      - name: build
+        run: lein cljsbuild once min
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GH_PAGES_SECRET }}
+          publish_dir: ./resources/public
