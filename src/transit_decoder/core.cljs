@@ -3,6 +3,8 @@
             ["prismjs/components/prism-core" :refer [highlight languages]]
             ["prismjs/components/prism-clojure"]
             [clojure.pprint :refer [pprint]]
+            [herb.core :refer [<class]]
+            [transit-decoder.css-classes :as css]
             [cognitect.transit :as transit]))
 
 (enable-console-print!)
@@ -29,9 +31,11 @@
   [:div
    [:h3 "Transit"]
    [:textarea {:value @transit-str*
+               :class (<class css/transit-input)
                :on-change #(reset! transit-str* (.. % -target -value))}]
    [:h3 "Clojure"]
-   [:pre>code {:dangerouslySetInnerHTML {:__html @clojure-str*}}]
+   [:pre {:class (<class css/clojure-output)}
+    [:code {:dangerouslySetInnerHTML {:__html @clojure-str*}}]]
    [:button {:on-click convert} "Convert Transit -> Clojure"]])
 
 (r/render [app] (.getElementById js/document "app"))

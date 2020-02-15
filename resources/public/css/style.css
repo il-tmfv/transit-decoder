@@ -1,13 +1,3 @@
 /* some style */
 
-textarea {
-  width: calc(100vw - 50px);
-  height: 250px;
-}
 
-pre {
-  width: calc(100vw - 50px);
-  height: 250px;
-  overflow-y: auto;
-  border: 1px solid black;
-}

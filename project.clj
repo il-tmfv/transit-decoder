@@ -8,6 +8,7 @@
 
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [reagent "0.8.1"]
+                 [herb "0.10.0"]
                  [com.cognitect/transit-cljs "0.8.256"]
                  [org.clojure/clojurescript "1.10.597"]
                  [org.clojure/core.async "0.4.474"]]
@@ -50,6 +51,7 @@
                 :compiler {:output-to "resources/public/js/compiled/transit_decoder.js"
                            :main transit-decoder.core
                            :optimizations :advanced
+                           :closure-defines {"goog.DEBUG" false}
                            :externs ["resources/public/js/prism-extern.js"]
                            :npm-deps {:prismjs "1.16.0"}
                            :install-deps true
