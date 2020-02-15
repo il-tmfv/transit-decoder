@@ -5,16 +5,28 @@
   [:body :html :h3 {:margin 0
                     :padding 0}]
   [:#app {:display "flex"
+          :min-height "calc(100vh - 24px * 2)"
           :flex-direction "column"
           :align-items "flex-start"
+          :background "#D8DEE9"
           :padding "24px"}])
 
-(defn transit-input []
+(defn text-input []
   {:width "100%"
-   :height "250px"})
+   :background "#ECEFF4"
+   :border-radius "2px"})
+
+(defn transit-input []
+  ^{:extend text-input}
+  {:height "250px"})
 
 (defn clojure-output []
-  {:width "100%"
-   :flex-grow 1
+  ^{:extend text-input}
+  {:flex-grow 1
    :overflow-y "auto"
    :border "1px solid black"})
+
+(defn convert-button []
+  {:margin "8px 0"
+   :font-size "15px"
+   :background "#81A1C1"})

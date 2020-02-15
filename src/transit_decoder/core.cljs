@@ -33,9 +33,11 @@
    [:textarea {:value @transit-str*
                :class (<class css/transit-input)
                :on-change #(reset! transit-str* (.. % -target -value))}]
+   [:button {:on-click convert
+             :class (<class css/convert-button)}
+    "Convert Transit -> Clojure"]
    [:h3 "Clojure"]
    [:pre {:class (<class css/clojure-output)}
-    [:code {:dangerouslySetInnerHTML {:__html @clojure-str*}}]]
-   [:button {:on-click convert} "Convert Transit -> Clojure"]])
+    [:code {:dangerouslySetInnerHTML {:__html @clojure-str*}}]]])
 
 (r/render [app] (.getElementById js/document "app"))
