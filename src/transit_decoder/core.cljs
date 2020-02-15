@@ -28,7 +28,7 @@
     (reset! clojure-str* (highlight (str pretty-converted-data) clojure-lang))))
 
 (defn app []
-  [:div
+  [:<>
    [:h3 "Transit"]
    [:textarea {:value @transit-str*
                :class (<class css/transit-input)
