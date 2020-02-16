@@ -7,7 +7,7 @@ herb.runtime.inject_obj_BANG_.cljs$core$IFn$_invoke$arity$variadic(["transit-dec
 
 transit_decoder.css_classes.global = (new cljs.core.List(null,new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$body,cljs.core.cst$kw$html,cljs.core.cst$kw$h3,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$margin,(0),cljs.core.cst$kw$padding,(0)], null)], null),(new cljs.core.List(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_SHARP_app,new cljs.core.PersistentArrayMap(null, 6, [cljs.core.cst$kw$display,"flex",cljs.core.cst$kw$min_DASH_height,"calc(100vh - 24px * 2)",cljs.core.cst$kw$flex_DASH_direction,"column",cljs.core.cst$kw$align_DASH_items,"flex-start",cljs.core.cst$kw$background,"#D8DEE9",cljs.core.cst$kw$padding,"24px"], null)], null),null,(1),null)),(2),null));
 transit_decoder.css_classes.text_input = (function transit_decoder$css_classes$text_input(){
-return new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$width,"100%",cljs.core.cst$kw$background,"#ECEFF4",cljs.core.cst$kw$border_DASH_radius,"2px"], null);
+return new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$width,"100%",cljs.core.cst$kw$resize,"none",cljs.core.cst$kw$background,"#ECEFF4",cljs.core.cst$kw$border_DASH_radius,"2px"], null);
 });
 transit_decoder.css_classes.transit_input = (function transit_decoder$css_classes$transit_input(){
 return cljs.core.with_meta(new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$height,"250px"], null),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$extend,transit_decoder.css_classes.text_input], null));

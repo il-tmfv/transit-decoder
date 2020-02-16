@@ -483,6 +483,7 @@ cljs.core.cst$kw$darkcyan = new cljs.core.Keyword(null,"darkcyan","darkcyan",-19
 cljs.core.cst$sym$validator = new cljs.core.Symbol(null,"validator","validator",-325659154,null);
 cljs.core.cst$sym$cljs$core_SLASH_zipmap = new cljs.core.Symbol("cljs.core","zipmap","cljs.core/zipmap",-1902130674,null);
 cljs.core.cst$sym$mark = new cljs.core.Symbol(null,"mark","mark",1266715182,null);
+cljs.core.cst$kw$resize = new cljs.core.Keyword(null,"resize","resize",297367086);
 cljs.core.cst$kw$illegal_DASH_argument = new cljs.core.Keyword(null,"illegal-argument","illegal-argument",-1845493170);
 cljs.core.cst$sym$saturation = new cljs.core.Symbol(null,"saturation","saturation",1626283598,null);
 cljs.core.cst$sym$defn = new cljs.core.Symbol(null,"defn","defn",-126010802,null);
