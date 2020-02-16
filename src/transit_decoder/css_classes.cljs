@@ -13,6 +13,7 @@
 
 (defn text-input []
   {:width "100%"
+   :resize "none"
    :background "#ECEFF4"
    :border-radius "2px"})
 
