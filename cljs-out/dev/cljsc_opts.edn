@@ -1,0 +1,1 @@
+{:optimizations :advanced, :main transit-decoder.core, :externs ["resources/public/js/prism-extern.js"], :npm-deps {:prismjs "1.16.0"}, :install-deps true, :output-to "resources/public/cljs-out/dev-main.js", :output-dir "resources/public/cljs-out/dev", :asset-path "/cljs-out/dev", :aot-cache false}
