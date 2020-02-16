@@ -1,4 +1,5 @@
 /resources/public/js/compiled/**
+/resources/public/cljs-out/dev
 figwheel_server.log
 pom.xml
 *jar
@@ -12,4 +13,5 @@ pom.xml
 .repl
 .nrepl-port
 node_modules
+.cpcache/
 .rebel_readline_history

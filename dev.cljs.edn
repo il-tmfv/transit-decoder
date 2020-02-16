@@ -1,0 +1,6 @@
+^{:watch-dirs ["src"]
+  :css-dirs ["resources/public/css"]}
+{:main transit-decoder.core
+ :externs ["resources/public/js/prism-extern.js"]
+ :npm-deps {:prismjs "1.16.0"}
+ :install-deps true}

@@ -1,4 +1,4 @@
-(ns transit-decoder.core
+(ns ^:figwheel-hooks transit-decoder.core
   (:require [reagent.core :as r]
             ["prismjs/components/prism-core" :refer [highlight languages]]
             ["prismjs/components/prism-clojure"]
@@ -7,19 +7,11 @@
             [transit-decoder.css-classes :as css]
             [cognitect.transit :as transit]))
 
-(enable-console-print!)
-
 (defonce app-state (r/atom {:transit ""
                             :clojure ""}))
 
 (defonce transit-str* (r/cursor app-state [:transit]))
 (defonce clojure-str* (r/cursor app-state [:clojure]))
-
-(defn on-js-reload []
-  ;; optionally touch your app-state to force rerendering depending on
-  ;; your application
-  ;; (swap! app-state update-in [:__figwheel_counter] inc)
-  )
 
 (defn convert []
   (let [converted-data (transit/read (transit/reader :json) @transit-str*)
@@ -40,4 +32,11 @@
    [:pre {:class (<class css/clojure-output)}
     [:code {:dangerouslySetInnerHTML {:__html @clojure-str*}}]]])
 
-(r/render [app] (.getElementById js/document "app"))
+(defn mount []
+  (r/render [app] (.getElementById js/document "app")))
+
+(defn ^:after-load re-render []
+  (mount))
+
+(defonce start-up (do (mount)
+                      true))
