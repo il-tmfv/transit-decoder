@@ -19,6 +19,22 @@
         clojure-lang (.-clojure languages)]
     (reset! clojure-str* (highlight (str pretty-converted-data) clojure-lang))))
 
+(defn paste-and-convert []
+  (-> (.readText js/navigator.clipboard)
+      (.then (fn [text]
+               (reset! transit-str* text)
+               (convert)))
+      (.catch (fn [error]
+                (js/alert error)))))
+
+(defn ClipboardButton []
+  (let [clipboard-api-supported? (exists? js/navigator.clipboard)]
+    (when clipboard-api-supported?
+      [:button
+       {:class (<class css/convert-button)
+        :on-click paste-and-convert}
+       "Paste and convert"])))
+
 (defn app []
   [:<>
    [:h3 "Transit"]
@@ -28,6 +44,7 @@
    [:button {:on-click convert
              :class (<class css/convert-button)}
     "Convert Transit -> Clojure"]
+   [ClipboardButton]
    [:h3 "Clojure"]
    [:pre {:class (<class css/clojure-output)}
     [:code {:dangerouslySetInnerHTML {:__html @clojure-str*}}]]])
