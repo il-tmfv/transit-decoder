@@ -2,8 +2,8 @@
   (:require [herb.core :refer [defglobal]]))
 
 (defglobal global
-  [:body :html :h3 {:margin 0
-                    :padding 0}]
+  [:body :html :h3 :pre {:margin 0
+                         :padding 0}]
   [:#app {:display "flex"
           :min-height "calc(100vh - 24px * 2)"
           :flex-direction "column"
