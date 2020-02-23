@@ -9,14 +9,14 @@ goog.require('garden.compiler');
  */
 garden.core.css = (function garden$core$css(var_args){
 var args__4736__auto__ = [];
-var len__4730__auto___15204 = arguments.length;
-var i__4731__auto___15205 = (0);
+var len__4730__auto___16486 = arguments.length;
+var i__4731__auto___16487 = (0);
 while(true){
-if((i__4731__auto___15205 < len__4730__auto___15204)){
-args__4736__auto__.push((arguments[i__4731__auto___15205]));
+if((i__4731__auto___16487 < len__4730__auto___16486)){
+args__4736__auto__.push((arguments[i__4731__auto___16487]));
 
-var G__15206 = (i__4731__auto___15205 + (1));
-i__4731__auto___15205 = G__15206;
+var G__16488 = (i__4731__auto___16487 + (1));
+i__4731__auto___16487 = G__16488;
 continue;
 } else {
 }
@@ -34,9 +34,9 @@ return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(garden.compiler.compile_css
 garden.core.css.cljs$lang$maxFixedArity = (0);
 
 /** @this {Function} */
-garden.core.css.cljs$lang$applyTo = (function (seq15203){
+garden.core.css.cljs$lang$applyTo = (function (seq16485){
 var self__4718__auto__ = this;
-return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq15203));
+return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq16485));
 });
 
 /**
@@ -45,14 +45,14 @@ return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq
  */
 garden.core.style = (function garden$core$style(var_args){
 var args__4736__auto__ = [];
-var len__4730__auto___15208 = arguments.length;
-var i__4731__auto___15209 = (0);
+var len__4730__auto___16490 = arguments.length;
+var i__4731__auto___16491 = (0);
 while(true){
-if((i__4731__auto___15209 < len__4730__auto___15208)){
-args__4736__auto__.push((arguments[i__4731__auto___15209]));
+if((i__4731__auto___16491 < len__4730__auto___16490)){
+args__4736__auto__.push((arguments[i__4731__auto___16491]));
 
-var G__15210 = (i__4731__auto___15209 + (1));
-i__4731__auto___15209 = G__15210;
+var G__16492 = (i__4731__auto___16491 + (1));
+i__4731__auto___16491 = G__16492;
 continue;
 } else {
 }
@@ -70,8 +70,8 @@ return garden.compiler.compile_style(maps);
 garden.core.style.cljs$lang$maxFixedArity = (0);
 
 /** @this {Function} */
-garden.core.style.cljs$lang$applyTo = (function (seq15207){
+garden.core.style.cljs$lang$applyTo = (function (seq16489){
 var self__4718__auto__ = this;
-return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq15207));
+return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq16489));
 });
 

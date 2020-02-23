@@ -18,10 +18,10 @@ if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(parsed,cljs.core.cst$kw$cljs$spe
 throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2("Invalid input",cljs.spec.alpha.explain_data(cljs.core.cst$kw$herb$spec_SLASH_options,options));
 } else {
 return cljs.core.reset_BANG_(herb.runtime.options,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$vendors,herb.impl.convert_vendors(cljs.core.mapv.cljs$core$IFn$_invoke$arity$2(((function (parsed){
-return (function (p__16687){
-var vec__16688 = p__16687;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16688,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16688,(1),null);
+return (function (p__17952){
+var vec__17953 = p__17952;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__17953,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__17953,(1),null);
 return v;
 });})(parsed))
 ,cljs.core.cst$kw$vendors.cljs$core$IFn$_invoke$arity$1(parsed))),cljs.core.cst$kw$auto_DASH_prefix,cljs.core.cst$kw$auto_DASH_prefix.cljs$core$IFn$_invoke$arity$1(options)], null));
@@ -35,14 +35,14 @@ return v;
  */
 herb.core.join = (function herb$core$join(var_args){
 var args__4736__auto__ = [];
-var len__4730__auto___16692 = arguments.length;
-var i__4731__auto___16693 = (0);
+var len__4730__auto___17957 = arguments.length;
+var i__4731__auto___17958 = (0);
 while(true){
-if((i__4731__auto___16693 < len__4730__auto___16692)){
-args__4736__auto__.push((arguments[i__4731__auto___16693]));
+if((i__4731__auto___17958 < len__4730__auto___17957)){
+args__4736__auto__.push((arguments[i__4731__auto___17958]));
 
-var G__16694 = (i__4731__auto___16693 + (1));
-i__4731__auto___16693 = G__16694;
+var G__17959 = (i__4731__auto___17958 + (1));
+i__4731__auto___17958 = G__17959;
 continue;
 } else {
 }
@@ -64,8 +64,8 @@ throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2("join takes one or more st
 herb.core.join.cljs$lang$maxFixedArity = (0);
 
 /** @this {Function} */
-herb.core.join.cljs$lang$applyTo = (function (seq16691){
+herb.core.join.cljs$lang$applyTo = (function (seq17956){
 var self__4718__auto__ = this;
-return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq16691));
+return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq17956));
 });
 
