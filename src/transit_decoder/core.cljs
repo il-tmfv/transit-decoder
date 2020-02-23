@@ -35,15 +35,18 @@
         :on-click paste-and-convert}
        "Paste and convert"])))
 
+(defn ConvertButton []
+  [:button {:on-click convert
+            :class (<class css/convert-button)}
+   "Convert Transit -> Clojure"])
+
 (defn app []
   [:<>
    [:h3 "Transit"]
    [:textarea {:value @transit-str*
                :class (<class css/transit-input)
                :on-change #(reset! transit-str* (.. % -target -value))}]
-   [:button {:on-click convert
-             :class (<class css/convert-button)}
-    "Convert Transit -> Clojure"]
+   [ConvertButton]
    [ClipboardButton]
    [:h3 "Clojure"]
    [:pre {:class (<class css/clojure-output)}
