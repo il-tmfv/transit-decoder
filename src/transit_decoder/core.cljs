@@ -3,8 +3,8 @@
             [re-frame.core :as rf]
             [transit-decoder.text-processing :refer [prettify-and-highlight-clojure-transit]]
             [transit-decoder.db :as db]
-            [herb.core :refer [<class]]
-            [transit-decoder.css-classes :as css]))
+            [transit-decoder.css-classes :as css]
+            [herb.core :refer [<class]]))
 
 (rf/reg-event-db
  :initialize
