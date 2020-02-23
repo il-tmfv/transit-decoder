@@ -14,10 +14,15 @@
 (defonce clojure-str* (r/cursor app-state [:clojure]))
 
 (defn convert []
-  (let [converted-data (transit/read (transit/reader :json) @transit-str*)
-        pretty-converted-data (with-out-str (pprint converted-data))
-        clojure-lang (.-clojure languages)]
-    (reset! clojure-str* (highlight (str pretty-converted-data) clojure-lang))))
+  (try
+    (let [converted-data (transit/read (transit/reader :json) @transit-str*)
+          pretty-converted-data (with-out-str (pprint converted-data))
+          clojure-lang (.-clojure languages)]
+      (reset! clojure-str* (highlight (str pretty-converted-data) clojure-lang)))
+    (catch js/SyntaxError e
+      (js/alert (str "Please check your input: " (.-message e))))
+    (catch :default e
+      (js/alert e))))
 
 (defn paste-and-convert []
   (-> (.readText js/navigator.clipboard)
