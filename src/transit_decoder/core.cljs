@@ -4,11 +4,8 @@
             [herb.core :refer [<class]]
             [transit-decoder.css-classes :as css]))
 
-(defonce app-state (r/atom {:transit ""
-                            :clojure ""}))
-
-(defonce transit-str* (r/cursor app-state [:transit]))
-(defonce clojure-str* (r/cursor app-state [:clojure]))
+(defonce transit-str* (r/atom ""))
+(defonce clojure-str* (r/atom ""))
 
 (defn convert []
   (try
