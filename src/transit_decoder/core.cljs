@@ -1,11 +1,8 @@
 (ns ^:figwheel-hooks transit-decoder.core
   (:require [reagent.core :as r]
-            ["prismjs/components/prism-core" :refer [highlight languages]]
-            ["prismjs/components/prism-clojure"]
-            [clojure.pprint :refer [pprint]]
+            [transit-decoder.text-processing :refer [prettify-and-highlight-clojure-transit]]
             [herb.core :refer [<class]]
-            [transit-decoder.css-classes :as css]
-            [cognitect.transit :as transit]))
+            [transit-decoder.css-classes :as css]))
 
 (defonce app-state (r/atom {:transit ""
                             :clojure ""}))
@@ -15,10 +12,7 @@
 
 (defn convert []
   (try
-    (let [converted-data (transit/read (transit/reader :json) @transit-str*)
-          pretty-converted-data (with-out-str (pprint converted-data))
-          clojure-lang (.-clojure languages)]
-      (reset! clojure-str* (highlight (str pretty-converted-data) clojure-lang)))
+    (reset! clojure-str* (prettify-and-highlight-clojure-transit @transit-str*))
     (catch js/SyntaxError e
       (js/alert (str "Please check your input: " (.-message e))))
     (catch :default e
