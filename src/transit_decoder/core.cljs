@@ -2,6 +2,7 @@
   (:require [reagent.core :as r]
             [re-frame.core :as rf]
             [transit-decoder.text-processing :refer [prettify-and-highlight-clojure-transit]]
+            [transit-decoder.db :as db]
             [herb.core :refer [<class]]
             [transit-decoder.css-classes :as css]))
 
@@ -16,20 +17,10 @@
  (fn [db [_ new-value]]
    (assoc db :transit-str new-value)))
 
-(rf/reg-sub
- :transit-str
- (fn [db _]
-   (:transit-str db)))
-
 (rf/reg-event-db
  :change-clojure-str
  (fn [db [_ new-value]]
    (assoc db :clojure-str new-value)))
-
-(rf/reg-sub
- :clojure-str
- (fn [db _]
-   (:clojure-str db)))
 
 (rf/reg-event-fx
  :show-error
@@ -99,13 +90,13 @@
 (defn app []
   [:<>
    [:h3 "Transit"]
-   [:textarea {:value @(rf/subscribe [:transit-str])
+   [:textarea {:value @db/transit-str*
                :class (<class css/transit-input)
                :on-change #(rf/dispatch [:change-transit-str (.. % -target -value)])}]
    [ActionButtons]
    [:h3 "Clojure"]
    [:pre {:class (<class css/clojure-output)}
-    [:code {:dangerouslySetInnerHTML {:__html @(rf/subscribe [:clojure-str])}}]]])
+    [:code {:dangerouslySetInnerHTML {:__html @db/clojure-str*}}]]])
 
 (defn mount []
   (r/render [app] (.getElementById js/document "app")))
