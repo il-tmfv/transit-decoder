@@ -40,14 +40,19 @@
             :class (<class css/convert-button)}
    "Convert Transit -> Clojure"])
 
+(defn ActionButtons []
+  [:div
+   [ConvertButton]
+   " "
+   [ClipboardButton]])
+
 (defn app []
   [:<>
    [:h3 "Transit"]
    [:textarea {:value @transit-str*
                :class (<class css/transit-input)
                :on-change #(reset! transit-str* (.. % -target -value))}]
-   [ConvertButton]
-   [ClipboardButton]
+   [ActionButtons]
    [:h3 "Clojure"]
    [:pre {:class (<class css/clojure-output)}
     [:code {:dangerouslySetInnerHTML {:__html @clojure-str*}}]]])
