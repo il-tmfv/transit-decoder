@@ -24,7 +24,9 @@
 (defn clojure-output []
   ^{:extend text-input}
   {:flex-grow 1
+   :flex-basis 0
    :overflow-y "auto"
+   :max-height "100%"
    :border "1px solid black"})
 
 (defn convert-button []
