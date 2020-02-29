@@ -16,6 +16,7 @@
 
 (defn ConvertButton []
   [:button {:on-click #(rf/dispatch [:click-on-convert])
+            :disabled @db/transit-string-empty?*
             :class (<class css/convert-button)}
    "Convert Transit -> Clojure"])
 
