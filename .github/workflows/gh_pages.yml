@@ -42,7 +42,7 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: build
-        run: clojure -A:fig:min
+        run: clojure -A:min
 
       - name: deploy to gh pages
         uses: peaceiris/actions-gh-pages@v3
