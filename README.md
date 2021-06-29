@@ -4,5 +4,5 @@ https://il-tmfv.github.io/transit-decoder/
 
 #### Commands
 
-- development build: `clj -A:build`
-- production build: `clojure -A:min`
+- development build: `clj -M:build`
+- production build: `clojure -M:min`
