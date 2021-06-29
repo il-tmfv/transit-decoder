@@ -6,4 +6,5 @@ https://il-tmfv.github.io/transit-decoder/
 
 - development build: `clj -M:build`
 - production build: `clojure -M:min`
-- check for outdated deps: `clojure -M:outdated`
+- check for outdated deps: `clojure -M:outdated` or `clojure -M:outdated --upgrade`
+- clean output dir: `rm -rf resources/public/cljs-out`
