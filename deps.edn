@@ -1,15 +1,19 @@
-{:deps {org.clojure/clojure {:mvn/version "1.9.0"}
-        org.clojure/clojurescript {:mvn/version "1.10.764"}
+{:deps {org.clojure/clojure {:mvn/version "1.10.3"}
+        org.clojure/clojurescript {:mvn/version "1.10.866"}
         herb/herb {:mvn/version "0.10.0"}
-        com.cognitect/transit-cljs {:mvn/version "0.8.256"}
+        com.cognitect/transit-cljs {:mvn/version "0.8.269"}
         com.bhauman/rebel-readline-cljs {:mvn/version "0.1.4"}
-        com.bhauman/figwheel-main {:mvn/version "0.2.9"}
-        reagent/reagent {:mvn/version "0.8.1"}
-        re-frame/re-frame {:mvn/version "0.11.0"}}
+        com.bhauman/figwheel-main {:mvn/version "0.2.13"}
+        reagent/reagent {:mvn/version "1.1.0"}
+        cljsjs/react {:mvn/version "17.0.2-0"}
+        cljsjs/react-dom {:mvn/version "17.0.2-0"}
+        re-frame/re-frame {:mvn/version "1.2.0"}}
  :paths ["src" "resources"]
  :aliases {:build {:main-opts ["-m" "figwheel.main"
                                "-b" "dev" "-r"]}
            :min   {:main-opts ["-m" "figwheel.main"
                                "-co" "prod-defines.edn"
                                "-O" "advanced"
-                               "-bo" "dev"]}}}
+                               "-bo" "dev"]}
+           :outdated {:extra-deps {com.github.liquidz/antq {:mvn/version "RELEASE"}}
+                      :main-opts ["-m" "antq.core"]}}}

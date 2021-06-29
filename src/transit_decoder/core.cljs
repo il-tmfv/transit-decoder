@@ -1,5 +1,5 @@
 (ns ^:figwheel-hooks transit-decoder.core
-  (:require [reagent.core :as r]
+  (:require [reagent.dom :as rd]
             [re-frame.core :as rf]
             [transit-decoder.events]
             [transit-decoder.db :as db]
@@ -38,7 +38,7 @@
     [:code {:dangerouslySetInnerHTML {:__html @db/clojure-str*}}]]])
 
 (defn mount []
-  (r/render [app] (.getElementById js/document "app")))
+  (rd/render [app] (.getElementById js/document "app")))
 
 (defn ^:after-load re-render []
   (mount))
