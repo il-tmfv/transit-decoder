@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.10.764 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.866 {:static-fns true, :optimize-constants true, :optimizations :advanced}
 goog.provide('re_frame.utils');
 goog.require('cljs.core');
 goog.require('cljs.core.constants');
@@ -7,20 +7,20 @@ goog.require('re_frame.loggers');
  * Dissociates an entry from a nested associative structure returning a new
  *   nested structure. keys is a sequence of keys. Any empty maps that result
  *   will not be present in the new structure.
- *   The key thing is that 'm' remains identical? to istelf if the path was never present
+ *   The key thing is that 'm' remains identical? to itself if the path was never present
  */
-re_frame.utils.dissoc_in = (function re_frame$utils$dissoc_in(m,p__13146){
-var vec__13147 = p__13146;
-var seq__13148 = cljs.core.seq(vec__13147);
-var first__13149 = cljs.core.first(seq__13148);
-var seq__13148__$1 = cljs.core.next(seq__13148);
-var k = first__13149;
-var ks = seq__13148__$1;
-var keys = vec__13147;
+re_frame.utils.dissoc_in = (function re_frame$utils$dissoc_in(m,p__17624){
+var vec__17625 = p__17624;
+var seq__17626 = cljs.core.seq(vec__17625);
+var first__17627 = cljs.core.first(seq__17626);
+var seq__17626__$1 = cljs.core.next(seq__17626);
+var k = first__17627;
+var ks = seq__17626__$1;
+var keys = vec__17625;
 if(ks){
-var temp__5455__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(m,k);
-if(cljs.core.truth_(temp__5455__auto__)){
-var nextmap = temp__5455__auto__;
+var temp__5751__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(m,k);
+if(cljs.core.truth_(temp__5751__auto__)){
+var nextmap = temp__5751__auto__;
 var newmap = (re_frame.utils.dissoc_in.cljs$core$IFn$_invoke$arity$2 ? re_frame.utils.dissoc_in.cljs$core$IFn$_invoke$arity$2(nextmap,ks) : re_frame.utils.dissoc_in.call(null,nextmap,ks));
 if(cljs.core.seq(newmap)){
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(m,k,newmap);
@@ -41,3 +41,46 @@ return cljs.core.first(v);
 return re_frame.loggers.console.cljs$core$IFn$_invoke$arity$variadic(cljs.core.cst$kw$error,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["re-frame: expected a vector, but got:",v], 0));
 }
 });
+/**
+ * Like apply, but f takes keyword arguments and the last argument is
+ *   not a seq but a map with the arguments for f
+ */
+re_frame.utils.apply_kw = (function re_frame$utils$apply_kw(var_args){
+var args__4835__auto__ = [];
+var len__4829__auto___17630 = arguments.length;
+var i__4830__auto___17631 = (0);
+while(true){
+if((i__4830__auto___17631 < len__4829__auto___17630)){
+args__4835__auto__.push((arguments[i__4830__auto___17631]));
+
+var G__17632 = (i__4830__auto___17631 + (1));
+i__4830__auto___17631 = G__17632;
+continue;
+} else {
+}
+break;
+}
+
+var argseq__4836__auto__ = ((((1) < args__4835__auto__.length))?(new cljs.core.IndexedSeq(args__4835__auto__.slice((1)),(0),null)):null);
+return re_frame.utils.apply_kw.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__4836__auto__);
+});
+
+(re_frame.utils.apply_kw.cljs$core$IFn$_invoke$arity$variadic = (function (f,args){
+if(cljs.core.map_QMARK_(cljs.core.last(args))){
+} else {
+throw (new Error("Assert failed: (map? (last args))"));
+}
+
+return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(f,cljs.core.apply.cljs$core$IFn$_invoke$arity$3(cljs.core.concat,cljs.core.butlast(args),cljs.core.last(args)));
+}));
+
+(re_frame.utils.apply_kw.cljs$lang$maxFixedArity = (1));
+
+/** @this {Function} */
+(re_frame.utils.apply_kw.cljs$lang$applyTo = (function (seq17628){
+var G__17629 = cljs.core.first(seq17628);
+var seq17628__$1 = cljs.core.next(seq17628);
+var self__4816__auto__ = this;
+return self__4816__auto__.cljs$core$IFn$_invoke$arity$variadic(G__17629,seq17628__$1);
+}));
+
