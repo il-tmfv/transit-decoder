@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.10.866 {:static-fns true, :optimize-constants true, :optimizations :advanced}
+// Compiled by ClojureScript 1.10.879 {:static-fns true, :optimize-constants true, :optimizations :advanced}
 goog.provide('herb.core');
 goog.require('cljs.core');
 goog.require('cljs.core.constants');
@@ -17,10 +17,10 @@ var parsed = cljs.spec.alpha.conform(cljs.core.cst$kw$herb$spec_SLASH_options,op
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(parsed,cljs.core.cst$kw$cljs$spec$alpha_SLASH_invalid)){
 throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2("Invalid input",cljs.spec.alpha.explain_data(cljs.core.cst$kw$herb$spec_SLASH_options,options));
 } else {
-return cljs.core.reset_BANG_(herb.runtime.options,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$vendors,herb.impl.convert_vendors(cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p__16375){
-var vec__16376 = p__16375;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16376,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16376,(1),null);
+return cljs.core.reset_BANG_(herb.runtime.options,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$vendors,herb.impl.convert_vendors(cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p__16312){
+var vec__16313 = p__16312;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16313,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16313,(1),null);
 return v;
 }),cljs.core.cst$kw$vendors.cljs$core$IFn$_invoke$arity$1(parsed))),cljs.core.cst$kw$auto_DASH_prefix,cljs.core.cst$kw$auto_DASH_prefix.cljs$core$IFn$_invoke$arity$1(options)], null));
 }
@@ -32,23 +32,23 @@ return v;
  *   ```
  */
 herb.core.join = (function herb$core$join(var_args){
-var args__4835__auto__ = [];
-var len__4829__auto___16380 = arguments.length;
-var i__4830__auto___16381 = (0);
+var args__4824__auto__ = [];
+var len__4818__auto___16317 = arguments.length;
+var i__4819__auto___16318 = (0);
 while(true){
-if((i__4830__auto___16381 < len__4829__auto___16380)){
-args__4835__auto__.push((arguments[i__4830__auto___16381]));
+if((i__4819__auto___16318 < len__4818__auto___16317)){
+args__4824__auto__.push((arguments[i__4819__auto___16318]));
 
-var G__16382 = (i__4830__auto___16381 + (1));
-i__4830__auto___16381 = G__16382;
+var G__16319 = (i__4819__auto___16318 + (1));
+i__4819__auto___16318 = G__16319;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__4836__auto__ = ((((0) < args__4835__auto__.length))?(new cljs.core.IndexedSeq(args__4835__auto__.slice((0)),(0),null)):null);
-return herb.core.join.cljs$core$IFn$_invoke$arity$variadic(argseq__4836__auto__);
+var argseq__4825__auto__ = ((((0) < args__4824__auto__.length))?(new cljs.core.IndexedSeq(args__4824__auto__.slice((0)),(0),null)):null);
+return herb.core.join.cljs$core$IFn$_invoke$arity$variadic(argseq__4825__auto__);
 });
 
 (herb.core.join.cljs$core$IFn$_invoke$arity$variadic = (function (classes){
@@ -62,8 +62,8 @@ throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2("join takes one or more st
 (herb.core.join.cljs$lang$maxFixedArity = (0));
 
 /** @this {Function} */
-(herb.core.join.cljs$lang$applyTo = (function (seq16379){
-var self__4817__auto__ = this;
-return self__4817__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq16379));
+(herb.core.join.cljs$lang$applyTo = (function (seq16316){
+var self__4806__auto__ = this;
+return self__4806__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq16316));
 }));
 

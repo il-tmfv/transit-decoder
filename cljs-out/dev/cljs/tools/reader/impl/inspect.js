@@ -1,12 +1,12 @@
-// Compiled by ClojureScript 1.10.866 {:static-fns true, :optimize-constants true, :optimizations :advanced}
+// Compiled by ClojureScript 1.10.879 {:static-fns true, :optimize-constants true, :optimizations :advanced}
 goog.provide('cljs.tools.reader.impl.inspect');
 goog.require('cljs.core');
 goog.require('cljs.core.constants');
 cljs.tools.reader.impl.inspect.inspect_STAR__col = (function cljs$tools$reader$impl$inspect$inspect_STAR__col(truncate,col,start,end){
 var n = cljs.core.count(col);
-var l = (cljs.core.truth_(truncate)?(0):(function (){var x__4309__auto__ = (10);
-var y__4310__auto__ = n;
-return ((x__4309__auto__ < y__4310__auto__) ? x__4309__auto__ : y__4310__auto__);
+var l = (cljs.core.truth_(truncate)?(0):(function (){var x__4298__auto__ = (10);
+var y__4299__auto__ = n;
+return ((x__4298__auto__ < y__4299__auto__) ? x__4298__auto__ : y__4299__auto__);
 })());
 var elements = cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.partial.cljs$core$IFn$_invoke$arity$2(cljs.tools.reader.impl.inspect.inspect_STAR_,true),cljs.core.take.cljs$core$IFn$_invoke$arity$2(l,col));
 var content = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.str,cljs.core.interpose.cljs$core$IFn$_invoke$arity$2(" ",elements));
@@ -63,22 +63,22 @@ return cljs.core.type(x);
 });
 if((typeof cljs !== 'undefined') && (typeof cljs.tools !== 'undefined') && (typeof cljs.tools.reader !== 'undefined') && (typeof cljs.tools.reader.impl !== 'undefined') && (typeof cljs.tools.reader.impl.inspect !== 'undefined') && (typeof cljs.tools.reader.impl.inspect.inspect_STAR_ !== 'undefined')){
 } else {
-cljs.tools.reader.impl.inspect.inspect_STAR_ = (function (){var method_table__4712__auto__ = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
-var prefer_table__4713__auto__ = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
-var method_cache__4714__auto__ = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
-var cached_hierarchy__4715__auto__ = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
-var hierarchy__4716__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$3(cljs.core.PersistentArrayMap.EMPTY,cljs.core.cst$kw$hierarchy,(function (){var fexpr__13251 = cljs.core.get_global_hierarchy;
-return (fexpr__13251.cljs$core$IFn$_invoke$arity$0 ? fexpr__13251.cljs$core$IFn$_invoke$arity$0() : fexpr__13251.call(null));
+cljs.tools.reader.impl.inspect.inspect_STAR_ = (function (){var method_table__4701__auto__ = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
+var prefer_table__4702__auto__ = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
+var method_cache__4703__auto__ = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
+var cached_hierarchy__4704__auto__ = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
+var hierarchy__4705__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$3(cljs.core.PersistentArrayMap.EMPTY,cljs.core.cst$kw$hierarchy,(function (){var fexpr__13188 = cljs.core.get_global_hierarchy;
+return (fexpr__13188.cljs$core$IFn$_invoke$arity$0 ? fexpr__13188.cljs$core$IFn$_invoke$arity$0() : fexpr__13188.call(null));
 })());
-return (new cljs.core.MultiFn(cljs.core.symbol.cljs$core$IFn$_invoke$arity$2("cljs.tools.reader.impl.inspect","inspect*"),cljs.tools.reader.impl.inspect.dispatch_inspect,cljs.core.cst$kw$default,hierarchy__4716__auto__,method_table__4712__auto__,prefer_table__4713__auto__,method_cache__4714__auto__,cached_hierarchy__4715__auto__));
+return (new cljs.core.MultiFn(cljs.core.symbol.cljs$core$IFn$_invoke$arity$2("cljs.tools.reader.impl.inspect","inspect*"),cljs.tools.reader.impl.inspect.dispatch_inspect,cljs.core.cst$kw$default,hierarchy__4705__auto__,method_table__4701__auto__,prefer_table__4702__auto__,method_cache__4703__auto__,cached_hierarchy__4704__auto__));
 })();
 }
 cljs.tools.reader.impl.inspect.inspect_STAR_.cljs$core$IMultiFn$_add_method$arity$3(null,cljs.core.cst$kw$string,(function (truncate,x){
 var n = (cljs.core.truth_(truncate)?(5):(20));
 var suffix = (((x.length > n))?"...\"":"\"");
-return ["\"",cljs.core.str.cljs$core$IFn$_invoke$arity$1(x.substring((0),(function (){var x__4309__auto__ = n;
-var y__4310__auto__ = x.length;
-return ((x__4309__auto__ < y__4310__auto__) ? x__4309__auto__ : y__4310__auto__);
+return ["\"",cljs.core.str.cljs$core$IFn$_invoke$arity$1(x.substring((0),(function (){var x__4298__auto__ = n;
+var y__4299__auto__ = x.length;
+return ((x__4298__auto__ < y__4299__auto__) ? x__4298__auto__ : y__4299__auto__);
 })())),suffix].join('');
 }));
 cljs.tools.reader.impl.inspect.inspect_STAR_.cljs$core$IMultiFn$_add_method$arity$3(null,cljs.core.cst$kw$strable,(function (truncate,x){
@@ -129,8 +129,8 @@ return cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.
  * the inspection.
  */
 cljs.tools.reader.impl.inspect.inspect = (function cljs$tools$reader$impl$inspect$inspect(var_args){
-var G__13253 = arguments.length;
-switch (G__13253) {
+var G__13190 = arguments.length;
+switch (G__13190) {
 case 1:
 return cljs.tools.reader.impl.inspect.inspect.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
