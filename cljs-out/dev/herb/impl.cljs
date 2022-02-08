@@ -127,7 +127,8 @@
   (when input
     (cond
       (keyword? input) (sanitize (name input))
-      :else (str/replace (str input) #"[^A-Za-z0-9-_]" "_"))))
+      :else (-> (str/replace (str input) #"[^A-Za-z0-9-_]" "_")
+                (str/replace #"^(-\d|\d)" "H")))))
 
 (defn- compose-selector
   [n hsh kind hint]
@@ -158,12 +159,12 @@
   "Entry point for macros.
   Takes an `opt` map as first argument, and currently only supports `:id true`
   which appends an id identifier instead of a class to the DOM"
-  [kind fn-name ns-name style-fn & args]
+  [kind _ ns-name style-fn & args]
   (let [name* (get-name style-fn ns-name)
         resolved-styles (extract-extended-styles (into [style-fn] args))
         style-data (prepare-data resolved-styles)
         hint (:hint (-> resolved-styles last meta))
-        selector (compose-selector name* (hash style-data) kind hint)
+        selector (compose-selector name* (hash (str style-data)) kind hint)
         identifier (sanitize name*)
         data-str (when dev? (create-data-string name*))
         result (runtime/inject-style! identifier [selector style-data] data-str)]

@@ -17,10 +17,10 @@ var parsed = cljs.spec.alpha.conform(cljs.core.cst$kw$herb$spec_SLASH_options,op
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(parsed,cljs.core.cst$kw$cljs$spec$alpha_SLASH_invalid)){
 throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2("Invalid input",cljs.spec.alpha.explain_data(cljs.core.cst$kw$herb$spec_SLASH_options,options));
 } else {
-return cljs.core.reset_BANG_(herb.runtime.options,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$vendors,herb.impl.convert_vendors(cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p__16312){
-var vec__16313 = p__16312;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16313,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16313,(1),null);
+return cljs.core.reset_BANG_(herb.runtime.options,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$vendors,herb.impl.convert_vendors(cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p__16309){
+var vec__16310 = p__16309;
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16310,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16310,(1),null);
 return v;
 }),cljs.core.cst$kw$vendors.cljs$core$IFn$_invoke$arity$1(parsed))),cljs.core.cst$kw$auto_DASH_prefix,cljs.core.cst$kw$auto_DASH_prefix.cljs$core$IFn$_invoke$arity$1(options)], null));
 }
@@ -33,14 +33,14 @@ return v;
  */
 herb.core.join = (function herb$core$join(var_args){
 var args__4824__auto__ = [];
-var len__4818__auto___16317 = arguments.length;
-var i__4819__auto___16318 = (0);
+var len__4818__auto___16314 = arguments.length;
+var i__4819__auto___16315 = (0);
 while(true){
-if((i__4819__auto___16318 < len__4818__auto___16317)){
-args__4824__auto__.push((arguments[i__4819__auto___16318]));
+if((i__4819__auto___16315 < len__4818__auto___16314)){
+args__4824__auto__.push((arguments[i__4819__auto___16315]));
 
-var G__16319 = (i__4819__auto___16318 + (1));
-i__4819__auto___16318 = G__16319;
+var G__16316 = (i__4819__auto___16315 + (1));
+i__4819__auto___16315 = G__16316;
 continue;
 } else {
 }
@@ -62,8 +62,8 @@ throw cljs.core.ex_info.cljs$core$IFn$_invoke$arity$2("join takes one or more st
 (herb.core.join.cljs$lang$maxFixedArity = (0));
 
 /** @this {Function} */
-(herb.core.join.cljs$lang$applyTo = (function (seq16316){
+(herb.core.join.cljs$lang$applyTo = (function (seq16313){
 var self__4806__auto__ = this;
-return self__4806__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq16316));
+return self__4806__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq16313));
 }));
 
